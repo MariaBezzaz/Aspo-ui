@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 25% 98%;
+    --foreground: 260 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 10% 10%;
+
+    --primary: 265 89% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 265 50% 95%;
+    --secondary-foreground: 265 89% 40%;
+
+    --muted: 260 10% 96%;
+    --muted-foreground: 260 10% 40%;
+
+    --accent: 265 50% 95%;
+    --accent-foreground: 265 89% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 260 10% 90%;
+    --input: 260 10% 90%;
+    --ring: 265 89% 60%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 260 25% 98%;
+    --sidebar-foreground: 260 10% 10%;
+    --sidebar-border: 260 10% 90%;
+    --sidebar-accent: 265 50% 95%;
+    --sidebar-accent-foreground: 265 89% 40%;
+  }
+
+  .dark {
+    --background: 260 15% 10%;
+    --foreground: 260 10% 98%;
+
+    --card: 260 15% 12%;
+    --card-foreground: 260 10% 98%;
+
+    --popover: 260 15% 12%;
+    --popover-foreground: 260 10% 98%;
+
+    --primary: 265 89% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 265 50% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 260 15% 20%;
+    --muted-foreground: 260 10% 70%;
+
+    --accent: 265 50% 20%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 260 15% 20%;
+    --input: 260 15% 20%;
+    --ring: 265 89% 60%;
+
+    --sidebar-background: 260 15% 12%;
+    --sidebar-foreground: 260 10% 98%;
+    --sidebar-border: 260 15% 20%;
+    --sidebar-accent: 265 50% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-violet-500;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-purple-600 to-violet-500;
+}
