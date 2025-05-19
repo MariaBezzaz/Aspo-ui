@@ -23,7 +23,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
     <SidebarProvider>
       <div className="flex min-h-screen">
         {/* Main Navigation Sidebar with Class List */}
-        <Sidebar collapsible="icon">
+        <Sidebar>
           <SidebarHeader className="flex h-16 items-center border-b px-6">
             <Link href="/" className="flex items-center gap-2 font-bold">
               <span className="text-xl gradient-text">Aspo</span>
