@@ -34,9 +34,9 @@ export default function GithubUrlInput() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="grid gap-2">
+      <div className="grid gap-4">
         <Label htmlFor="github-url">GitHub Repository URL</Label>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <div className="relative flex-1">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <Github className="h-4 w-4 text-muted-foreground" />
