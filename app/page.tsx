@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, ArrowRight, BarChart3, GitGraph, FileCode } from "lucide-react"
+import { Github, BarChart3, GitGraph, FileCode } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -155,15 +155,54 @@ export default function Home() {
                   <span>Distribution graphs for all metrics</span>
                 </li>
               </ul>
-              <Button className="mt-6" size="lg">
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
             </div>
             <div className="bg-muted rounded-xl p-4 shadow-lg">
               <div className="aspect-video rounded-lg overflow-hidden bg-card">
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                  <p>Dashboard Preview</p>
+                {/* Utilisation de code HTML/CSS pour créer un aperçu visuel du tableau de bord */}
+                <div className="w-full h-full bg-gray-900 text-gray-200 p-6">
+                  <div className="mb-6 font-bold text-lg">Dashboard Overview</div>
+                  <div className="grid grid-cols-4 gap-4 mb-6">
+                    <div className="bg-gray-800 p-3 rounded">
+                      <div className="text-violet-400 text-xl font-bold">67</div>
+                      <div className="text-xs">Classes</div>
+                    </div>
+                    <div className="bg-gray-800 p-3 rounded">
+                      <div className="text-violet-400 text-xl font-bold">23</div>
+                      <div className="text-xs">Interfaces</div>
+                    </div>
+                    <div className="bg-gray-800 p-3 rounded">
+                      <div className="text-violet-400 text-xl font-bold">812</div>
+                      <div className="text-xs">Methods</div>
+                    </div>
+                    <div className="bg-gray-800 p-3 rounded">
+                      <div className="text-violet-400 text-xl font-bold">5243</div>
+                      <div className="text-xs">Lines</div>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="text-sm font-medium mb-1">Bug Risk Distribution</div>
+                    <div className="flex items-center">
+                      <div className="w-20 text-xs">High Risk</div>
+                      <div className="flex-1 h-2.5 bg-gray-700 rounded overflow-hidden">
+                        <div className="bg-red-500 h-full w-[18%]"></div>
+                      </div>
+                      <div className="ml-2 text-xs">18%</div>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-20 text-xs">Medium Risk</div>
+                      <div className="flex-1 h-2.5 bg-gray-700 rounded overflow-hidden">
+                        <div className="bg-orange-500 h-full w-[37%]"></div>
+                      </div>
+                      <div className="ml-2 text-xs">37%</div>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-20 text-xs">Low Risk</div>
+                      <div className="flex-1 h-2.5 bg-gray-700 rounded overflow-hidden">
+                        <div className="bg-green-500 h-full w-[45%]"></div>
+                      </div>
+                      <div className="ml-2 text-xs">45%</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -182,44 +221,13 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-              <div className="space-y-4">
-                <h4 className="font-medium">Product</h4>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <Link href="/features" className="text-muted-foreground hover:text-primary transition-colors">
-                      Features
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/docs" className="text-muted-foreground hover:text-primary transition-colors">
-                      Documentation
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/cli" className="text-muted-foreground hover:text-primary transition-colors">
-                      CLI Tool
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <h4 className="font-medium">Resources</h4>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-                      Blog
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/examples" className="text-muted-foreground hover:text-primary transition-colors">
-                      Examples
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/faq" className="text-muted-foreground hover:text-primary transition-colors">
-                      FAQ
+                    <Link href="/docs" className="text-muted-foreground hover:text-primary transition-colors">
+                      Documentation
                     </Link>
                   </li>
                 </ul>
@@ -235,11 +243,6 @@ export default function Home() {
                     >
                       <Github className="h-4 w-4" />
                       GitHub
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                      Contact
                     </Link>
                   </li>
                 </ul>
